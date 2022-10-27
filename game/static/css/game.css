@@ -7,7 +7,7 @@
 }
 
 .ac-game-menu-field{
-    height:7vh;
+    width:20vw;
     position:relative;
     top:40vh;
     left:19vh;
@@ -21,7 +21,7 @@
     font-style:italic;
     padding:2vh;
     text-align:center;
-    background-color:xgba(39,21,28,0.6);
+    background-color:rgba(39,21,28,0.6);
     border-radius:10px;
     letter-spacing:0.5vw;
     cursor: pointer;
