@@ -3,30 +3,26 @@ class AcGameMenu {
                 this.root = root;
                 this.$menu = $(`
                     <div class="ac-game-menu">
-                   
-                    <div class="ac-game-menu-field">
-                        <div class="ac-game-menu-field-item ac-game-menu-field-item-single-mode">
-                        单人模式
+                        <div class="ac-game-menu-field">
+                            <div class="ac-game-menu-field-item ac-game-menu-field-item-single-mode">
+                                单人模式
+                            </div>
+                            <br>
+                            <div class="ac-game-menu-field-item ac-game-menu-field-item-multi-mode">
+                                多人模式
+                            </div>
+                            <br>
+                            <div class="ac-game-menu-field-item ac-game-menu-field-item-settings">
+                                设置
+                            </div>
                         </div>
-                        <br>
-                        <div class="ac-game-menu-field-item ac-game-menu-field-item-multi-mode">
-                        多人模式
-                      </div>
-                      <br>
-                        <div class="ac-game-menu-field-item ac-game-menu-field-item-settings">
-                        设置
-                        </div>
-                    </div>
                     </div>
                     `);
-
-        this.$menu.hide();
         this.root.$ac_game.append(this.$menu);
-        this.$single_mode=this.$menu.find('.ac-game-menu-field-itme-single-mode');
-        this.$multi_mode=this.$menu.find('.ac-gaem-menu-field-item-multi-mode');
-        this.$settings=this.$menu.find('.ac-game-menu-field-item-settings);
+        this.$single_mode=this.$menu.find('.ac-game-menu-field-item-single-mode');
+        this.$multi_mode=this.$menu.find('.ac-game-menu-field-item-multi-mode');
+        this.$settings=this.$menu.find('.ac-game-menu-field-item-settings');
         this.start();
-
     }
 
     start(){
@@ -40,13 +36,12 @@ class AcGameMenu {
             outer.root.playground.show();
         });
         this.$multi_mode.click(function(){
-            console.log("cick multi mode")
+            console.log("click multi mode");
         });
-        this.settings.click(function(){
-            console.log("click settings")
+        this.$settings.click(function(){
+            console.log("click settings");
         });
     }
-    
     show(){//显示当前界面
         this.$menu.show();
     }
